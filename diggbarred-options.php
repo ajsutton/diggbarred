@@ -18,9 +18,13 @@
 			<textarea name="diggbarred_style" id="diggbarred_style" rows="5" cols="50" type="text"><?php echo get_option('diggbarred_style'); ?></textarea>
 		</td>
 	</tr>
+	<tr valign="top">
+		<td colspan="2">
+			<label><input type="checkbox" name="diggbarred_allframes" id="diggbarred_allframes" <?php if (get_option('diggbarred_allframes')) { echo 'checked'; } ?>/>Bust out of all frames</label>
+		</td>
 </table>
 <input type="hidden" name="action" value="update" />
-<input type="hidden" name="page_options" value="diggbarred_message, diggbarred_style" />
+<input type="hidden" name="page_options" value="diggbarred_message, diggbarred_style, diggbarred_allframes" />
 <p class="submit">
 	<input type="submit" name="submit" class="button-primary" value="Save Changes" />
 </p>
