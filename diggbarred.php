@@ -24,6 +24,9 @@ function diggbarred_do_the_shit()
 		header("Vary: Referer");
 	    echo '<div style="'.get_option('diggbarred_style').'"><p>' . get_option('diggbarred_message') . '</p></div>';
 	    exit;
+	} else {
+		$script_url = trailingslashit( get_bloginfo('wpurl') ) . PLUGINDIR . '/' . dirname( plugin_basename(__FILE__) ) . "/diggbarred.js";
+		wp_enqueue_script('diggbarred_script', $script_url);
 	}
 	
 }
